@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Comfortaa, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-right: 8px;
+    font-size: clamp(0.6rem, 0.5rem + 0.533vw, 1.2rem);
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 8px;
+    margin: 0;
+}
+
+body::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+body::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button  {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 20px;
+    border: 2px solid #f1f1f1;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+li{
+    display: inline-block;
+}
+
+.galada{
+    font-family: Galada, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    font-size: clamp(1rem, 0.708rem + 1.556vw, 2.75rem);
+}
+
+h3{
+    padding: 20px;
+    font-size: clamp(1rem, 0.833rem + 0.889vw, 2rem);
+}
+
+.reservar{
+    padding: 3px 10px;
+    background-color: #11150D;
+    color: white;
+    border: 1px solid white;
+    border-radius: 60px; 
+}
+
+#bd-min{
+    min-width: 300px;
+}
+
+/*! HEADER */
+
+header{
+    position: fixed;
+    background-color: #526A40;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6); 
+    z-index: 100;
+    min-width: 300px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav a{
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 60px;
+    padding: 3px 8px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav img{
+    background-color: white;
+    padding: 3px 3px;
+    border-radius: 100%;
+}
+
+.enl-inicio{
+    border: none;
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.img-inicio{
+    width: 30px;
+    height: 30px;
+    border-radius: 60px;
+}
+
+.logo{
+    color: white;
+    text-decoration: underline;
+    background-color: transparent;
+    border: 0;
+    font-size: 25px;
+}
+
+.boton-cabecera{
+    display: none;
+}
+
+/*! MAIN */
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px; /* De esta manera hago que tengo de margen el main de 60px igual al header */
+    text-align: center;
+    width: 100vw;
+    text-align: center;
+}
+
+main > section{
+    width: 70vw;
+}
+
+.bg{
+    border-radius: 8px;
+    background-color: rgba(181, 234, 140, .4);
+}
+
+.seccion-principal{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    width: 70%;
+    margin: 0 auto;
+    height: 85vh;
+    min-width: 300px;
+}
+
+.seccion-principal > article:last-of-type{
+    margin: 5%;
+}
+
+
+.foto-principal{
+    width: 90%;
+    height: 100%;
+    margin-bottom: 20%;
+    border-radius: 15px;
+}
+
+
+.seccion-secundaria{
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    min-width: 300px;
+}
+
+.seccion-secundaria > article{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.seccion-secundaria article:last-of-type{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.seccion-secundaria > article:last-of-type > div:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.seccion-secundaria > article:last-of-type > div:first-of-type > picture{
+    display: flex;
+    justify-content: space-between;   
+}
+
+.seccion-secundaria > article:last-of-type img{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+/*! FOOTER */
+
+footer{
+    display: flex;
+    background-color: rgba(86, 58, 29, .9);
+    width: 100vw;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    min-width: 300px;
+}
+
+footer article{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.enlaces-siguenos{
+    margin: 0 10px;
+}
+
+footer > article:last-of-type > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .seccion-secundaria > article:last-of-type img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .seccion-secundaria > article:last-of-type img{
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .seccion-secundaria > article:last-of-type img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/*! Tableta */
+@media screen and (max-width: 950px){
+
+    .reservar-mv{
+        padding: 2px 7px;
+    }
+
+    .tercera-foto{
+        display: none;
+    }
+
+     /*! HEADER */
+
+    header{
+        height: 55px;
+    }
+
+    nav{
+        width: 95%;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a{
+        padding: 2px 7px;
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    /*! MAIN */
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 55px;
+    }
+
+    .seccion-principal{
+        width: 95vw;
+        height: auto;
+    }
+
+    .foto-principal{
+        width: 95%;
+        height: 100%;
+        margin-bottom: 10%;
+        border-radius: 15px;
+    }
+
+    .seccion-secundaria div:first-of-type{
+        width: 100%;
+    } 
+
+    .seccion-secundaria div:first-of-type > picture{
+        margin-left: 10px;
+    } 
+
+    .seccion-secundaria > article:last-of-type img{
+        width: 180px;
+        height: 180px;
+    }
+
+    /*! FOOTER */
+
+    footer{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .seccion-secundaria > article:last-of-type img{
+        width: 130px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .dp-none-contacto{
+        display: none;
+    } 
+
+    iframe{
+        width: 150px;
+    }
+}
+
+
+
+/* Móvil */
+@media screen and (max-width: 450px){
+
+    body{
+        min-width: 400px;
+    }
+
+    .logo{
+        font-size: 16px;
+    }
+
+    .dp-none{
+        display: none;
+    }
+
+    .reservar-mv{
+        padding: 1px 6px;
+    }
+
+    /*! HEADER */
+
+    header{
+        height: 50px;
+        font-size: 12px;
+    }
+
+    nav{
+        width: 100vw;
+        margin: 0 6px;
+    }
+
+    nav a{
+        padding: 1px 6px;
+    }
+
+    .boton-cabecera{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 3rem;
+        border: 0;
+        background: transparent;
+        gap: .40rem;
+        margin-right: 6px;
+    }
+    
+    .boton-cabecera > div{
+        background-color: black;
+        height: 2px;
+        width: 90%;
+        border-radius: 5px;
+        transition: all .5s;
+        transform-origin: left;
+    }
+
+    /*! MAIN */
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .seccion-principal{
+        display: block;
+        width: 90%;
+    }
+
+    .foto-principal{
+        width: 80%;
+        height: 90%;
+        margin-bottom: 10%;
+        border-radius: 15px;
+    }
+
+    .seccion-secundaria{
+        padding: 30px 5px;
+    }
+
+    .seccion-secundaria > article{
+        width: 90%;
+    }
+
+    .seccion-secundaria div:first-of-type{
+        width: 90%;
+        margin: 0 auto;
+    } 
+
+    .seccion-secundaria div:first-of-type > picture{
+        width: 80%;
+        margin: 0 15%;
+    } 
+
+    .seccion-secundaria > article:last-of-type img{
+        width: 185px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    /*! FOOTER */
+
+    footer{
+        display: block;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+    .seccion-secundaria > article:last-of-type img{
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .dp-none-nav-reservar{
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 10px;
+    }
+}

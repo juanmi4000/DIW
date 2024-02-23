@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+// body
+
+body{
+    font-family: $fuenteComfortaa;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-right: 8px;
+    font-size: clamp(1rem, 0.9375rem + 0.3333vw, 1.5625rem);
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 8px;
+    margin: 0;
+}
+
+body::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+body::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button  {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 20px;
+    border: 2px solid #f1f1f1;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $fuenteTitulos;
+}
+
+
+// clases
+.reservar{
+    padding: 3px 10px;
+    background-color: nth($colores_bg, 5);
+    color: nth($colores_bg, 4);
+    border: 1px solid nth($colores_bg, 4);
+    border-radius: 60px; 
+}
+
+.bg{
+    border-radius: 8px;
+    background-color: nth($colores_bg, 2);
+}
+
+.bg-white {
+    background-color: nth($colores_bg, 4);
+    border-radius: 10px;
+}
+
+// modificadores comunes
+li{
+    display: inline-block;
+}
+
+h2{
+    font-size: clamp(1.4rem, 1.206rem + 1.035vw, 2.5rem);
+}
+
+h3{
+    padding: 20px;
+    font-size: clamp(1.2rem, 1.024rem + 0.941vw, 2.2rem);
+}
+
+header > nav > a:first-of-type {
+    font-family: $fuenteTitulos;
+}

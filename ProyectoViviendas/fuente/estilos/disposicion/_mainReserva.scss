@@ -1,0 +1,26 @@
+main {
+    > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 90px;
+            flex: 1;
+            > div {
+                display: flex;
+                justify-content: space-between;
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                } 
+            } 
+        }
+    }
+    
+    > section:last-of-type {
+        display: none;
+    }
+}

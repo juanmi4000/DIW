@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAMA LOLES</title>
+        <link rel="stylesheet" href="../estilos/registrarse.scss">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="logo" href="../index.html"><img src="../multimedia/img/logos/casa-512px.png" alt="Logo"></a>
+                <button id="btn-regis" class="inicio-regis">
+                    <div></div>
+                    <div></div>
+                </button>
+            </nav>
+        </header>
+        <main class="main-regis">
+            <section class="sect-regis">
+                <article>
+                    <h3>Registrarse</h3>
+                </article>
+                <article>
+                    <form action="#">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Introduce tu nombre" required>
+
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" placeholder="Introduce tu correo" required>
+
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" placeholder="Introduce tu dirección" required>
+
+                        <label for="fechaNac">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNac" placeholder="dd/mm/YYYY" required> <!-- Revisar si es date o datetime -->
+                        
+                        <label>Género</label>
+                        <div class="inl">
+                            <label><input type="radio" name="genero" value="hombre" required>Hombre</label>
+                            <label><input type="radio" name="genero" value="mujer">Mujer</label>
+                            <label><input type="radio" name="genero" value="otro">Otro</label>
+                        </div>
+                        
+                        <label for="contra">Contraseña</label>
+                        <input type="password" id="contra" placeholder="Introduce tu contraseña" required>
+
+                        <label for="contraRepe">Repite la contraseña</label>
+                        <input type="password" id="contraRepe" placeholder="Introduce tu contraseña" required> 
+
+                        <input type="submit" value="Registrarse">
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <script>    
+            let btnRegis = document.getElementById("btn-regis");
+            btnRegis.addEventListener("click", (evento) => {
+                location.href = "./inicioSesion.html";
+            });
+        </script>
+    </body>
+</html>

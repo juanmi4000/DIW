@@ -1,0 +1,19 @@
+footer{
+    display: flex;
+    text-align: center;
+}
+
+footer article{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+footer > article:last-of-type > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

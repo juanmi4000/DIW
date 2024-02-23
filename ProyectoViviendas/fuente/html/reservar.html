@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAMA LOLES</title>
+        <link rel="stylesheet" href="../estilos/reservar.scss">
+        <script src="../js/eventos.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="logo" href="../index.html"><img src="../multimedia/img/logos/casa-512px.png" alt="Logo"></a>
+                <ul>
+                    <li class="dp-none"><a href="../index.html">Viviendas</a></li>
+                    <li class="dp-none"><a id="actividades" href="actividadesPlanes.html">Actividades y planes</a></li>
+                    <li class="dp-none"><a class="dp-none-contacto" href="contacto.html">Contacto</a></li>
+                    <li><a class="reservar reservar-mv dp-none-nav-reservar" href="reservar.html">Reservar</a></li>
+                    <li><a class="enl-inicio" href="inicioSesion.html"><img src="../multimedia/img/logos/acceso-24px.png" alt="Inicio de sesion"></a></li>
+                </ul>
+                <button class="boton-cabecera">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <h2>Tu disfrute empieza aquí</h2>
+                </article>
+                <article>
+                    <form action="#">
+                        <div>
+                            <div>
+                                <label for="entrada">Entrada</label>
+                                <input type="date" id="entrada" value="YYYY/mm/dd" required>
+                            </div>
+
+                            <div>
+                                <label for="salida">Salida</label>
+                                <input type="date" id="salida" required>
+                            </div>
+
+                            <div>
+                                <label for="vivienda">Vivienda</label>
+                                <select>
+                                    <option value="mamaLoles">Mama Loles</option>
+                                    <option value="cuevaPrados">Cueva los Prados</option>
+                                    <option value="apartReina">Apartamento Reina</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="adultos">Adultos</label>
+                                <input type="number" id="adultos" min="1" placeholder="1" required>
+                            </div>
+
+                            <div>
+                                <label for="ninos">Niños</label>
+                                <input type="number" id="ninos" min="0" placeholder="0" required>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="submit" value="Comprobar alquiler">
+                        </div>
+                    </form>
+                </article>
+            </section>
+            <section>
+                <h2 id="vivienda_elegida"></h2>
+                <div id="imagen_elegida"></div>
+                <p id="noches_personas"></p>
+                <p id="precio"></p>
+                <a href="#">Confirmar reserva</a>
+                <p id="confirmacion"></p>
+            </section>
+        </main> 
+        <footer>
+            <article>
+                <h3>MAMA LOLES</h3>
+                <P>Expertos en gestión de propiedades en Jaén.  Descubre el confort de nuestras tres exclusivas viviendas. Tu hogar en nuestras manos.</P>
+            </article>
+            <article>
+                <h3>Contacto</h3>
+                <p>Úbeda, Jaén, 23400</p>
+                <p>Móvil: 666666666</p>
+                <p>Email: mamaloles@gmail.com</p>
+            </article>
+            <article>
+                <h3>Síguenos</h3>
+                <div>
+                    <div>
+                        <a class="enlaces-siguenos" href="#">
+                            <img src="../multimedia/img/logos/instagram.png" alt="Instagram">
+                        </a>
+                        <a class="enlaces-siguenos" href="#">
+                            <img src="../multimedia/img/logos/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.7524564122405!2d-3.3681075242334524!3d38.0062340719281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6ef471b2ea4e4b%3A0xc8abd1590c813ed7!2sC.%20Redonda%20de%20Miradores%2C%2023400%20%C3%9Abeda%2C%20Ja%C3%A9n!5e0!3m2!1sen!2ses!4v1707070556756!5m2!1sen!2ses" width="200" height="100" style="border:0;" allowfullscreen="" loading="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </article>
+        </footer>
+
+        <script>
+            function fechaActual () {
+                let actual = new Date();
+                return actual.toLocaleDateString();
+            }
+            let entrada = document.getElementById("entrada");
+            entrada.min = fechaActual();
+            entrada.value = fechaActual();
+        </script>
+    </body>
+</html>

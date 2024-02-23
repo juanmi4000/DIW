@@ -1,0 +1,7 @@
+.centrar{
+    margin: 0 auto;
+}
+
+.width-70vw{
+    @include ancho(70vw);
+}

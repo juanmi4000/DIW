@@ -1,0 +1,167 @@
+main{
+    margin-top: 60px; /* De esta manera hago que tengo de margen el main de 60px igual al header */
+    text-align: center;
+    width: 100vw;
+}
+
+main > section{
+    width: 70vw;
+}
+
+.seccion-principal{
+    padding: 50px;
+    width: 70%;
+    margin: 0 auto;
+    height: calc(100vh - 10%);
+    > article:first-of-type {
+        > p {
+            padding: 0 10px;
+        }
+    }
+}
+
+.seccion-secundaria{
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    width: 100vw;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.seccion-secundaria > article{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.seccion-secundaria > article:last-of-type img{
+    border-radius: 30px;
+}
+
+@include mixin_media_query(min, tama20){
+    .foto-principal{
+        width: calc(90% + 2%);
+        height: calc(100% + 2%);
+        margin-bottom: 20%;
+        border-radius: 15px;
+    }
+
+    .seccion-secundaria > article:last-of-type img{
+        width: calc(300px + 6vw);
+        height: calc(300px + 6vw);
+    }
+}
+
+@include mixin_media_query(max, tama20){
+    .foto-principal{
+        width: calc(90% - 2%);
+        height: calc(100% - 2%);
+        margin-bottom: 20%;
+        border-radius: 15px;
+    }
+
+    .seccion-secundaria > article:last-of-type img{
+        width: calc(300px - 1vw);
+        height: calc(300px - 1vw);
+    }
+}
+
+@include mixin_media_query(max, tama14){
+    .seccion-secundaria > article:last-of-type img{
+        width: calc(300px - 6vw);
+        height: calc(300px - 6vw);
+    }
+}
+
+@include mixin_media_query(max, tama11_5){
+    .seccion-secundaria > article:last-of-type img{
+        width: calc(300px - 10vw);
+        height: calc(300px - 10vw);
+    }
+} 
+
+@include mixin_media_query(max, tama9_5){
+
+    .reservar-mv{
+        padding: 2px 7px;
+    }
+
+    .seccion-principal{
+        width: 95vw;
+        height: auto;
+    }
+
+    .foto-principal{
+        width: 95%;
+        height: 100%;
+        margin-bottom: 10%;
+        border-radius: 15px;
+    }
+
+    .seccion-secundaria > article {
+        width: 90%; 
+    }
+
+    .seccion-secundaria > article > div:first-of-type {
+        margin: 0 5%;
+    }
+
+    .seccion-secundaria > article:last-of-type img{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@include mixin_media_query(max, tama7){
+    .seccion-secundaria > article:last-of-type img{
+        width: 130px;
+        height: 120px;
+    }
+}
+
+@include mixin_media_query(max, tama5_6){
+
+    .seccion-principal > article{
+        margin-bottom: 10px;
+    }
+}
+
+@include mixin_media_query(max, tama4_5){
+
+    .reservar-mv{
+        padding: 1px 6px;
+    }
+
+    main{
+        margin-top: 50px;
+    }
+
+    .seccion-principal{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .foto-principal{
+        width: 80%;
+        height: 90%;
+        margin-bottom: 10%;
+        border-radius: 15px;
+    }
+
+    .seccion-secundaria{
+        padding: 30px 5px;
+    }
+
+    .seccion-secundaria > article{
+        width: 95%;
+    }
+
+    .seccion-secundaria div:first-of-type{
+        width: 90%;
+        margin: 0 auto;
+    } 
+
+    .seccion-secundaria > article:last-of-type img{
+        width: 185px;
+        height: 150px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,29 @@
+main {
+    > section:nth-of-type(2){
+        > article:last-of-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    form {
+         > div {
+            display: flex;
+            flex-direction: column;
+            /*  gap: 20px; */
+         }
+    }
+}
+
+@include mixin_media_query(max, tama7){
+    .ultima-foto {
+        display: none;
+    }
+}
+
+@include mixin_media_query(max, tama4_5){
+    .dp-none {
+        display: none;
+    }
+}

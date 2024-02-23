@@ -1,0 +1,41 @@
+footer{
+    background-color: nth($colores_bg, 3);
+    width: 100vw;
+    color: nth($colores_bg, 4);
+    padding: 50px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    min-width: 300px;
+}
+
+footer article{
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.enlaces-siguenos{
+    margin: 0 10px;
+}
+
+@include mixin_media_query(max, tama9_5){
+    footer{
+        padding: 10px;
+    }
+}
+
+@include mixin_media_query(max, tama5_6){
+    iframe{
+        width: 150px;
+    }
+
+    footer{
+        display: block;
+        padding: 10px;
+    }
+}
+
+@include mixin_media_query(max, tama4_5){
+    footer{
+        display: block;
+        padding: 10px;
+    }
+}

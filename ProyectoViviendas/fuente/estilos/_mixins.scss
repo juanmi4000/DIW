@@ -1,0 +1,21 @@
+@use "sass:map";
+
+@mixin modificar($propiedad1, $valor) {
+    #{$propiedad1}:$valor;
+}
+
+@mixin jc($valor){
+    justify-content: $valor;
+}
+
+@mixin ancho($valor) {
+    width: $valor;
+}
+
+@mixin mixin_media_query($tipo: max, $tamanyo) {
+    $size: map.get($puntos-ruptura, $tamanyo);
+  
+    @media only screen and (#{$tipo}-width: $size) {
+      @content;
+    }
+}

@@ -1,0 +1,48 @@
+header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.boton-cabecera{
+    display: none;
+}
+
+@include mixin_media_query(max, tama9_5){
+
+    nav ul {
+        gap: 10px;
+    }
+}
+
+@include mixin_media_query(max, tama4_5){
+    .dp-none{
+        display: none;
+    }
+
+    .boton-cabecera{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .40rem;
+    }
+}

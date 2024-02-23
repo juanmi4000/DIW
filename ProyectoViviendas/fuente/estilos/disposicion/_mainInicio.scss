@@ -1,0 +1,34 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+article:last-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > form{
+        display: flex;
+        flex-direction: column;
+        @include modificar(gap, 10px);
+
+        > label{
+            text-align: start;
+        }
+    }
+}
+
+.sect-regis{
+    form{
+        @include modificar(gap, 2px);
+    }
+}
+
+.inl{
+    display: flex;
+    justify-content: space-evenly;
+}
