@@ -12,19 +12,19 @@ main {
     }
     > section:last-of-type {
         > article {
-            height: 285px;
-            padding: 2% 4%;
+            height: max-content;
+            padding: 4%;
+
+            > p {
+                height: calc(100% - 40px);
+            }
 
             > img {
                 width: 90%;
+                height: 400px;
                 margin-top: calc(100% - 96%);
                 margin-bottom: calc(100% - 96%);
                 border-radius: 10px;
-            }
-
-            > a {
-                align-content: end;
-                
             }
         }
     }
@@ -34,6 +34,14 @@ main {
     main {
         >section {
             width: 80vw;
+        }
+
+        > section:last-of-type {
+            > article {
+                > img {
+                    height: 200px;
+                }
+            }
         }
     }
 }

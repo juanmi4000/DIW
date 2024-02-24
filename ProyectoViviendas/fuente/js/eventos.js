@@ -1,6 +1,6 @@
 function cambiarEnlace(){
     let enlace = document.getElementById("actividades");
-    if (window.innerWidth < 630) {
+    if (window.innerWidth < 680) {
         enlace.textContent = "Actividades";
     } else {
         enlace.textContent = "Actividades y planes";
