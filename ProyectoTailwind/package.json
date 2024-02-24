@@ -1,0 +1,34 @@
+{
+  "name": "proyectotailwind",
+  "version": "1.0.0",
+  "description": "Home de viviendas con TailWind",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:vigilante": "tailwindcss -i ./fuente/css/estilos.css -o ./fuente/css/salida.css --watch",
+    "tailwind:una-vez": "tailwindcss -i ./fuente/css/estilos.css -o ./fuente/css/salida.css ",
+    "parcel:desarrollo": "parcel fuente/index.html --dist-dir desarrollo",
+    "parcel:produccion": "parcel build fuente/index.html --public-url './' --dist-dir produccion",
+    "limpieza": "rimraf desarrollo produccion .parcel-cache",
+    "des": "npm-run-all -p tailwind:vigilante parcel:desarrollo",
+    "prod": "npm-run-all limpia tailwind:una-vez parcel:produccion",
+    "ordena": "prettier --write fuente"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanmi4000/GarciaMoyano_JuanManuel_DIW.git"
+  },
+  "author": "Juan Manuel García Moyano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanmi4000/GarciaMoyano_JuanManuel_DIW/issues"
+  },
+  "homepage": "https://github.com/juanmi4000/GarciaMoyano_JuanManuel_DIW#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.1",
+    "parcel": "^2.11.0"
+  }
+}
