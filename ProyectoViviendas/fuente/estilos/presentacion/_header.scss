@@ -1,7 +1,7 @@
 header{
     background-color: #526A40;
     width: 100vw;
-    height: 60px;
+    height: 70px;
     box-shadow: 5px 0 10px rgba(0, 0, 0, .6); 
     z-index: 100;
 }
@@ -16,31 +16,21 @@ nav a{
     border: 1px solid nth($colores_bg, 6);
     background-color: nth($colores_bg, 4);
     border-radius: 60px;
-    padding: 3px 6px;
+    padding: 3px 4px;
 }
 
 nav img{
     background-color: nth($colores_bg, 4);
-    padding: 3px 3px;
+    padding: 3px;
     border-radius: 100%;
+    width: 40px;
+    height: auto;
 }
 
 .enl-inicio{
     border: none;
     background-color: transparent;
 }
-
-nav img {
-    width: 30px;
-    height: auto;
-}
-
-.img-inicio{
-    width: 30px;
-    height: 30px;
-    border-radius: 60px;
-}
-
 .logo{
     margin-top: 15px;
     color: nth($colores_bg, 4);
@@ -52,26 +42,18 @@ nav img {
 
 @include mixin_media_query(max, tama9_5){
     nav{
-        width: 95%;
+        width: 98%;
     }
 
     nav a{
         padding: 2px 7px;
     }
-
-/*     .logo{
-        font-size: 20px;
-    } */
 }
 
 @include mixin_media_query(max, tama4_5){
     header{
-        height: 50px;
+        height: 60px;
     }
-
-    /* .logo{
-        font-size: 16px;
-    } */
 
     nav{
         width: 100vw;

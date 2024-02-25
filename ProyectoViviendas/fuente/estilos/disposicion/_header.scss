@@ -29,8 +29,14 @@ nav ul {
 @include mixin_media_query(max, tama9_5){
 
     nav ul {
-        gap: 10px;
+        gap: 8px;
     }
+}
+
+@include mixin_media_query(max, tama5_6){
+    .dp-none-contacto{
+        display: none;
+    } 
 }
 
 @include mixin_media_query(max, tama4_5){

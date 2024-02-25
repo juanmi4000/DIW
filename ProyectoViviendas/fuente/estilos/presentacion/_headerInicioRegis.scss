@@ -1,7 +1,7 @@
 header{
     background-color: #526A40;
     width: 100vw;
-    height: 60px;
+    height: 70px;
     box-shadow: 5px 0 10px rgba(0, 0, 0, .6); 
     z-index: 100;
 }
@@ -79,6 +79,6 @@ nav img {
 
 @include mixin_media_query(max, tama4_5){
     header{
-        height: 50px;
+        height: 60px;
     }
 }

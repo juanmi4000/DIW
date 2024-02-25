@@ -14,7 +14,7 @@ body{
     flex-direction: column;
     width: 100vw;
     margin-right: 8px;
-    font-size: clamp(1rem, 0.9375rem + 0.3333vw, 1.5625rem);
+    font-size: clamp(1rem, 0.934rem + 0.302vw, 1.5rem);
 }
 
 body::-webkit-scrollbar {
@@ -74,12 +74,12 @@ li{
 }
 
 h2{
-    font-size: clamp(1.4rem, 1.206rem + 1.035vw, 2.5rem);
+    font-size: clamp(1.6rem, 1.442rem + 0.725vw, 2.8rem);
 }
 
 h3{
     padding: 20px;
-    font-size: clamp(1.2rem, 1.024rem + 0.941vw, 2.2rem);
+    font-size: clamp(1.3rem, 1.155rem + 0.664vw, 2.4rem);
 }
 
 header > nav > a:first-of-type {

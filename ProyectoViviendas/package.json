@@ -1,18 +1,18 @@
 {
   "name": "viviendas_mama_loles",
   "version": "1.0.0",
-  "browserlist" : "> 0.07%, last 4 version, not dead",
+  "browserlist": "> 0.07%, last 4 version, not dead",
   "description": "Aplicación web de tres viviendas",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "parcel:desarrollo" : "parcel fuente/index.html --dist-dir desarrollo",
-    "parcel:produccion" : "parcel build fuente/index.html --public-url './' --dist-dir produccion",
-    "limpieza" : "rimraf desarrollo produccion .parcel-cache",
-    "des" : "npm run parcel:desarrollo",
-    "prod" : "npm-run-all limpieza parcel:produccion"
+    "parcel:desarrollo": "parcel fuente/index.html --dist-dir desarrollo",
+    "parcel:produccion": "parcel build fuente/index.html --public-url './' --dist-dir produccion",
+    "limpieza": "rimraf desarrollo produccion .parcel-cache",
+    "des": "npm run parcel:desarrollo",
+    "prod": "npm-run-all limpieza parcel:produccion"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,8 @@
     "parcel-plugin-imagemin": "^4.0.2",
     "rimraf": "^5.0.5",
     "sass": "^1.70.0"
+  },
+  "dependencies": {
+    "remixicons": "^1.0.0"
   }
 }

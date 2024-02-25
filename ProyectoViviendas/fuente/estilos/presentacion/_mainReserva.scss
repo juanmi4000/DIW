@@ -6,33 +6,46 @@ main {
             padding: 50px;
             margin: 0 auto;
             > form {
-                width: 80vw;
-                height: 110px;
                 > div:first-of-type {
-                    padding: 30px;
-                    background-color: nth($colores_bg, 4);
-                    border-radius: 40px;
-
                     > div {
+                        position: relative;
+                        background-color: nth($colores_bg, 4);
+                        width: 100%;
+                        padding: 30px;
+
+                        &:first-of-type {
+                            border-bottom-left-radius: 40px;
+                            border-top-left-radius: 40px;
+                        }
+
+                        &:last-of-type {
+                            border-bottom-right-radius: 40px;
+                            border-top-right-radius: 40px;
+                        }
+
                         input[type=date]::-webkit-calendar-picker-indicator {
                             display: none;
                         }
 
-                        input[type=date], select {
+                        input[type=date], select, option {
                             font-family: $fuenteComfortaa;
                         }
-                        position: relative;
-                        width: 80%;
+                        
                         > label ~ input, label ~ select {
                             margin-top: 10px;
                         }
 
                         > select {
                             width: min-content;
+                            background-color: nth($colores_bg, 4);
                         }
 
                         > input {
                             width: 50%;
+                        }
+
+                        > input[type=date] {
+                            width: 80%;
                         }
 
                         >input, select {
@@ -40,16 +53,16 @@ main {
                             border: 0;
                             margin: 0 auto;
                         }
-                    }
 
-                    >div:not(:last-of-type)::after {
-                        content: '';
-                        position: absolute;
-                        background-color: nth($colores_bg, 6);
-                        width: 1px;
-                        height: calc(110px - 5px);
-                        top: -30px;
-                        right: 0;
+                        &:not(:last-of-type)::after {
+                            content: '';
+                            position: absolute;
+                            background-color: nth($colores_bg, 6);
+                            width: 1px;
+                            height: 106px;
+                            top: 0;
+                            right: 0;
+                        }
                     }
                 }
 
@@ -66,6 +79,23 @@ main {
                     color: nth($colores_bg, 4);
                     font-family: $fuenteComfortaa;
                 } 
+
+                /* Quitar los controles de número */
+                input[type=number]::-webkit-outer-spin-button,
+                input[type=number]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                input[type=number] {
+                    appearance: auto;
+                    -moz-appearance: textfield; /* Firefox */
+                } 
+
+                /* Quitar el control de fecha */
+                input[type=date]::-webkit-calendar-picker-indicator {
+                    display: none;
+                }
             }
         }
     }
@@ -77,10 +107,30 @@ main {
 }
 
 @include mixin_media_query(max, tama9_5){
+    /* main > section > article > form > div:first-of-type > div */
+    main {
+        > section {
+            > article {
+                > form {
+                    width: 98vw;
+                    > div:first-of-type {
+                        > div {
+                            padding: 2px;
+                            > input[type=date] {
+                                width: 90%;
+                            }
 
+                            &:not(:last-of-type)::after {
+                                height: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-/* 
-@include mixin_media_query(max, ){
+@include mixin_media_query(max, tama4_5){
 
-} */
+}

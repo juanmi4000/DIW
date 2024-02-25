@@ -1,7 +1,7 @@
 main{
     height: 100vh;
     background-color: nth($colores_bg, 7);
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 section{
@@ -88,7 +88,7 @@ section{
 
 @include mixin_media_query(max, tama5_4){
     .main-regis{
-        margin-top: 50px;
+        margin-top: 60px;
         padding-bottom: 20%;
     }
     

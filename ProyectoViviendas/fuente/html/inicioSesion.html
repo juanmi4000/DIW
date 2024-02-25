@@ -10,7 +10,7 @@
     <body>
         <header>
             <nav>
-                <a class="logo" href="../index.html"><img src="../multimedia/img/logos/casa-512px.png" alt="Logo"></a>
+                <a class="logo" href="../index.html"><img src="../../node_modules/remixicons/fill/home-heart.svg" alt="Logo"></a>
                 <button id="btn-inicio" class="inicio-regis">       
                     <div></div>
                     <div></div>
@@ -34,5 +34,11 @@
                 </article>
             </section>
         </main>
+        <script>    
+            let btnInicio = document.getElementById("btn-inicio");
+            btnInicio.addEventListener("click", (evento) => {
+                location.href = "../index.html";
+            });
+        </script>
     </body>
 </html>

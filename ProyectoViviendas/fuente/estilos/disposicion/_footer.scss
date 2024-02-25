@@ -1,12 +1,12 @@
 footer{
     display: flex;
+    order: 2;
 }
 
 footer article{
     display: flex;
     flex-direction: column;
     flex-basis: 500px;
-    justify-content: flex-start;
     align-items: center;
     gap: 10px;
 }
