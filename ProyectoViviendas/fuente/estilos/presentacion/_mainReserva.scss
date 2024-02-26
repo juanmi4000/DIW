@@ -11,7 +11,40 @@ main {
                         position: relative;
                         background-color: nth($colores_bg, 4);
                         width: 100%;
-                        padding: 30px;
+                        &:not(:last-of-type) {
+                            padding: 15px;
+                        }
+                        
+                        > div {
+                            position: relative;
+                            padding:15px;
+
+                            > label ~ input {
+                                margin-top: 10px;
+                            }
+
+                            >input, label {
+                                text-align: center;
+                                border: 0;
+                                margin: 0 auto;
+                            }
+    
+                            &:not(:last-of-type)::after {
+                                content: '';
+                                position: absolute;
+                                background-color: nth($colores_bg, 6);
+                                width: 1px;
+                                height: 77px;
+                                top: 0;
+                                right: 0;
+                            }
+
+                            input[type=number]::-webkit-outer-spin-button,
+                            input[type=number]::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                        }
 
                         &:first-of-type {
                             border-bottom-left-radius: 40px;
@@ -59,7 +92,7 @@ main {
                             position: absolute;
                             background-color: nth($colores_bg, 6);
                             width: 1px;
-                            height: 106px;
+                            height: 77px;
                             top: 0;
                             right: 0;
                         }
@@ -112,17 +145,35 @@ main {
         > section {
             > article {
                 > form {
-                    width: 98vw;
                     > div:first-of-type {
                         > div {
-                            padding: 2px;
-                            > input[type=date] {
+                            padding: 10px;
+                            /* > input[type=date] {
                                 width: 90%;
+                            } */
+
+                            &:nth-of-type(3) {
+                                border-bottom-right-radius: 40px;
+                                border-top-right-radius: 40px;
+                                &::after {
+                                    display: none;
+                                }
                             }
 
-                            &:not(:last-of-type)::after {
-                                height: 48px;
+
+                            &:nth-of-type(4) {
+                                margin-left: 60%;
+                                border-bottom-left-radius: 40px;
+                                border-top-left-radius: 40px;
                             }
+
+                            &:not(:nth-of-type(3))::after {
+                                height: 64px;
+                            }
+                        }
+
+                        > div:last-of-type {
+                            margin-top: 40px;
                         }
                     }
                 }

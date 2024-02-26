@@ -9,13 +9,17 @@ main {
             flex-direction: column;
             place-content: center;
             gap: 40px;
-            > div {
+            > div:first-of-type {
                 display: flex;
                 justify-content: space-between;
-                > div {
+                > div:not(:last-of-type) {
                     display: flex;
                     flex-direction: column;
-                } 
+                }
+                > div:last-of-type {
+                    display: flex;
+                    margin: 0 auto;
+                }
             } 
         }
 
@@ -27,18 +31,29 @@ main {
 }
 
 @include mixin_media_query(max, tama9_5){
-    
+    main {
+        > section { 
+            form { 
+                > div:first-of-type {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: auto auto;
+                }
+
+            }
+        }
+    }
 }
 
 @include mixin_media_query(max, tama4_5){
     main {
         > section {
             form {
-                > div {
+                > div:first-of-type {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
-                }
-                
+                    grid-template-rows: repeat(2, 1fr);
+                }   
             }
         }
     }
