@@ -33,17 +33,17 @@
                 <article>
                     <form action="#">
                         <div>
-                            <div>
+                            <div class="item-a">
                                 <label for="entrada">Entrada</label>
                                 <input type="date" id="entrada" value="YYYY/mm/dd" required>
                             </div>
 
-                            <div>
+                            <div class="item-a">
                                 <label for="salida">Salida</label>
                                 <input type="date" id="salida" required>
                             </div>
 
-                            <div>
+                            <div class="item-a">
                                 <label for="vivienda">Vivienda</label>
                                 <select>
                                     <option value="mamaLoles">Mama Loles</option>
@@ -53,13 +53,15 @@
                             </div>
 
                             <div>
-                                <label for="adultos">Adultos</label>
-                                <input type="number" id="adultos" min="1" placeholder="1" required>
-                            </div>
-
-                            <div>
-                                <label for="ninos">Niños</label>
-                                <input type="number" id="ninos" min="0" placeholder="0" required>
+                                <div class="item-b">
+                                    <label for="adultos">Adultos</label>
+                                    <input type="number" id="adultos" min="1" placeholder="1" required>
+                                </div>
+    
+                                <div class="item-b">
+                                    <label for="ninos">Niños</label>
+                                    <input type="number" id="ninos" min="0" placeholder="0" required>
+                                </div>
                             </div>
                         </div>
                         <div>
