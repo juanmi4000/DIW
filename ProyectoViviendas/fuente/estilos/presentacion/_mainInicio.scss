@@ -1,6 +1,6 @@
 main{
     height: 100vh;
-    background-color: nth($colores_bg, 7);
+    background-color: nth($colores_bg, 2);
     margin-top: 70px;
 }
 
@@ -11,7 +11,7 @@ section{
     > article:first-of-type{
         border-top-left-radius: 60px;
         border-top-right-radius: 60px;
-        background-color: nth($colores_bg, 8);
+        background-color: nth($colores_bg, 7);
         > h3{
             color: nth($colores_bg, 4);
         }

@@ -125,8 +125,6 @@ main > section{
 
 @include mixin_media_query(max, tama7){
     .seccion-secundaria > article:last-of-type > div:first-of-type {
-        flex-direction: column;
-        gap: 40px;
         > div {
             margin: 0 auto;
         }

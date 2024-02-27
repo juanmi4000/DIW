@@ -30,6 +30,13 @@ main{
     }
 }
 
+@include mixin_media_query(max, tama7){
+    .seccion-secundaria > article:last-of-type > div:first-of-type {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
 @include mixin_media_query(max, tama9_5){
 
     .tercera-foto{
