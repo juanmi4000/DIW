@@ -64,19 +64,19 @@ main > section{
     }
 }
 
-@include mixin_media_query(max, tama14){
+@include mixin_media_query_ambos(min, tama11_5, max, tama20){
     .seccion-secundaria > article:last-of-type img{
-        width: calc(300px - 6vw);
-        height: calc(300px - 6vw);
+        width: calc(180px + 4vw);
+        height: calc(180px + 4vw);
     }
 }
 
 @include mixin_media_query(max, tama11_5){
     .seccion-secundaria > article:last-of-type img{
-        width: calc(300px - 10vw);
-        height: calc(300px - 10vw);
+        width: calc(280px - 9vw);
+        height: calc(280px - 9vw);
     }
-} 
+}  
 
 @include mixin_media_query(max, tama9_5){
 
@@ -104,16 +104,38 @@ main > section{
         margin: 0 5%;
     }
 
-    .seccion-secundaria > article:last-of-type img{
-        width: 180px;
-        height: 180px;
+    .seccion-secundaria{
+        > article:last-of-type{
+            > div {
+                > div:first-of-type {
+                    margin-left: 10%;
+                }
+                > div:nth-of-type(2) {
+                    margin-right: 10%;
+                }
+            }
+            img{
+                width: 180px;
+                height: 180px;
+            }
+        }
+
     }
 }
 
 @include mixin_media_query(max, tama7){
+    .seccion-secundaria > article:last-of-type > div:first-of-type {
+        flex-direction: column;
+        gap: 40px;
+        > div {
+            margin: 0 auto;
+        }
+    }
+
     .seccion-secundaria > article:last-of-type img{
-        width: 130px;
-        height: 120px;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
     }
 }
 
@@ -135,15 +157,10 @@ main > section{
     }
 
     .seccion-principal{
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .foto-principal{
-        width: 80%;
-        height: 90%;
-        margin-bottom: 10%;
-        border-radius: 15px;
+        color: rgb(255, 255, 255);
+        width: 100%;
+        background: linear-gradient(rgba(0, 0 , 0, 0.45), rgba(0, 0 , 0, 0.45)), url("../multimedia/img/logos/MamaLolesSalon.jpg");
+        background-size: cover;
     }
 
     .seccion-secundaria{
@@ -155,13 +172,11 @@ main > section{
     }
 
     .seccion-secundaria div:first-of-type{
-        width: 90%;
         margin: 0 auto;
     } 
 
     .seccion-secundaria > article:last-of-type img{
-        width: 185px;
-        height: 150px;
+        height: auto;
         margin: 0 auto;
     }
 }

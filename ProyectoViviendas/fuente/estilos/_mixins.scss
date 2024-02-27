@@ -19,3 +19,12 @@
       @content;
     }
 }
+
+@mixin mixin_media_query_ambos($tipo_min: min, $tamanyo_min,$tipo_max: max, $tamanyo_max) {
+    $size_min: map.get($puntos-ruptura, $tamanyo_min);
+    $size_max: map.get($puntos-ruptura, $tamanyo_max);
+  
+    @media only screen and (#{$tipo_min}-width: $size_min) and (#{$tipo_max}-width: $size_max) {
+      @content;
+    }
+}
