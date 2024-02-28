@@ -612,10 +612,6 @@ video {
   height: 100%;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .w-11\/12{
   width: 91.666667%;
 }
@@ -748,11 +744,6 @@ video {
   line-height: 2rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -803,6 +794,14 @@ video {
 
   .tableta\:w-11\/12{
     width: 91.666667%;
+  }
+
+  .tableta\:w-4\/5{
+    width: 80%;
+  }
+
+  .tableta\:w-9\/12{
+    width: 75%;
   }
 
   .tableta\:flex-col{
