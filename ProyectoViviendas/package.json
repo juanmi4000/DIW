@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "browserlist": "> 0.07%, last 4 version, not dead",
   "description": "Aplicación web de tres viviendas",
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
@@ -30,9 +29,7 @@
     "parcel": "^2.11.0",
     "parcel-plugin-imagemin": "^4.0.2",
     "rimraf": "^5.0.5",
-    "sass": "^1.70.0"
-  },
-  "dependencies": {
+    "sass": "^1.70.0",
     "remixicons": "^1.0.0"
   }
 }
