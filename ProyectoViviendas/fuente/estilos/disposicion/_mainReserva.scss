@@ -11,15 +11,15 @@ main {
             gap: 40px;
             > div:first-of-type {
                 display: flex;
-                justify-content: space-between;
-                > div:not(:last-of-type) {
+                /*justify-content: space-between; */
+                > div {
                     display: flex;
-                    flex-direction: column;
+                    > div {
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
-                > div:last-of-type {
-                    display: flex;
-                    margin: 0 auto;
-                }
+                
             } 
         }
 
@@ -30,30 +30,33 @@ main {
     }
 }
 
-@include mixin_media_query(max, tama9_5){
+@include mixin_media_query(max, tama10_5){
     main {
         > section { 
             form { 
                 > div:first-of-type {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    grid-template-rows: auto auto;
+                    flex-direction: column;
+                    > div:first-of-type {
+                        display: flex;
+                    }
                 }
-
             }
         }
     }
 }
 
-@include mixin_media_query(max, tama4_5){
+@include mixin_media_query(max, tama5){
     main {
         > section {
             form {
                 > div:first-of-type {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    grid-template-rows: repeat(2, 1fr);
-                }   
+                    > div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
             }
         }
     }

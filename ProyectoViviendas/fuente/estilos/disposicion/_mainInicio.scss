@@ -18,6 +18,9 @@ article:last-of-type{
 
         > label{
             text-align: start;
+            > input {
+                margin: 0 auto;
+            } 
         }
     }
 }
@@ -30,5 +33,11 @@ article:last-of-type{
 
 .inl{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    >label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

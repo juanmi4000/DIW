@@ -30,13 +30,6 @@ main{
     }
 }
 
-@include mixin_media_query(max, tama7){
-    .seccion-secundaria > article:last-of-type > div:first-of-type {
-        flex-direction: column;
-        gap: 40px;
-    }
-}
-
 @include mixin_media_query(max, tama9_5){
 
     .tercera-foto{
@@ -50,6 +43,23 @@ main{
     }
 }
 
+@include mixin_media_query(max, tama7){
+    .seccion-secundaria > article:last-of-type > div:first-of-type {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@include mixin_media_query(max, tama5_6){
+
+    .seccion-principal{
+        display: block;
+        > article:last-of-type {
+            margin-top: 50px;
+        }
+    }
+}
+
 @include mixin_media_query(max, tama4_5){
 
     main{
@@ -58,7 +68,5 @@ main{
         align-items: center;
     }
 
-    .seccion-principal{
-        display: block;
-    }
+    
 }

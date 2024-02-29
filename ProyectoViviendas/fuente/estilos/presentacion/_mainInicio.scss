@@ -29,6 +29,21 @@ section{
 
             > input {
                 border-radius: 5px;
+                font-size: clamp(1rem, 0.967rem + 0.178vw, 1.3rem);
+                padding: 2px 4px;
+            }
+
+            > label {
+                display: inline-block;
+
+                > input {
+                    margin: 20px auto;
+                }
+            }
+
+            > input[type=date] {
+                font-family: $fuenteComfortaa;
+                opacity: .6;
             }
             
             >label ~ input{
@@ -44,18 +59,27 @@ section{
                 color: nth($colores_bg, 4);
                 margin-bottom: 10%;
                 font-family: $fuenteComfortaa;
+                font-size: clamp(1rem, 0.967rem + 0.178vw, 1.3rem);
             }
         }
     }
 }
 
+.inl{
+    >label {
+        > input[type=radio] {
+            margin-right: 7px;
+        }
+    }
+}
+
 .main-regis{
-    height: 100%;
-    padding-bottom: 8%;
+
+    padding: 5%;
 }
 
 .sect-regis{
-    margin-top: 60px;
+    margin-top: 70px;
     > article:last-of-type {
         padding: 2%;
 
@@ -72,21 +96,18 @@ section{
     margin-top: 5%;
 }
 
-@include mixin_media_query(max, tama9_5){
+@include mixin_media_query(max, tama12){
     main{
         margin-top: 50px;
     }
-
-    .main-regis{
-        height: auto;
-    }
+    
     section{
         width: nth($tamanos_pantalla, 3); //! tamaño
     }
 }
 
 
-@include mixin_media_query(max, tama5_4){
+@include mixin_media_query(max, tama7){
     .main-regis{
         margin-top: 60px;
         padding-bottom: 20%;
@@ -98,6 +119,22 @@ section{
             width: 100%; //! tamaño;
             > form{
                 width: 80%; 
+            }
+        }
+    }
+}
+
+
+@include mixin_media_query(max, tama4_5){
+    .main-regis{
+        margin-top: 60px;
+        padding-bottom: 20%;
+    }
+    
+    section{
+        > article:last-of-type {
+            > form{
+                width: 96%; 
             }
         }
     }

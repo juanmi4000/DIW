@@ -11,13 +11,12 @@ main {
                         position: relative;
                         background-color: nth($colores_bg, 4);
                         width: 100%;
-                        &:not(:last-of-type) {
-                            padding: 15px;
-                        }
                         
                         > div {
                             position: relative;
                             padding:15px;
+                            height: 80px;
+                            width: 185px;   
 
                             > label ~ input {
                                 margin-top: 10px;
@@ -34,7 +33,7 @@ main {
                                 position: absolute;
                                 background-color: nth($colores_bg, 6);
                                 width: 1px;
-                                height: 77px;
+                                height: 80px;
                                 top: 0;
                                 right: 0;
                             }
@@ -60,28 +59,20 @@ main {
                             display: none;
                         }
 
-                        input[type=date], select, option {
+                        input[type=date], select{
                             font-family: $fuenteComfortaa;
                         }
                         
-                        > label ~ input, label ~ select {
+                        label ~ select {
                             margin-top: 10px;
                         }
 
-                        > select {
-                            width: min-content;
-                            background-color: nth($colores_bg, 4);
+                        select {
+                            background-color: transparent;
+                            width: 90%;
                         }
 
-                        > input {
-                            width: 50%;
-                        }
-
-                        > input[type=date] {
-                            width: 80%;
-                        }
-
-                        >input, select {
+                        select {
                             text-align: center;
                             border: 0;
                             margin: 0 auto;
@@ -139,42 +130,42 @@ main {
 
 }
 
-@include mixin_media_query(max, tama9_5){
+@include mixin_media_query(max, tama10_5){
     /* main > section > article > form > div:first-of-type > div */
     main {
         > section {
             > article {
+                padding: 20px;
                 > form {
                     > div:first-of-type {
                         > div {
-                            padding: 10px;
-                            /* > input[type=date] {
-                                width: 90%;
-                            } */
-
-                            &:nth-of-type(3) {
-                                border-bottom-right-radius: 40px;
-                                border-top-right-radius: 40px;
-                                &::after {
-                                    display: none;
-                                }
+                            > div {
+                                width: 150px;
                             }
+                        }
 
+                        > div::after {
+                            display: none;
+                        }
 
-                            &:nth-of-type(4) {
-                                margin-left: 60%;
-                                border-bottom-left-radius: 40px;
-                                border-top-left-radius: 40px;
-                            }
-
-                            &:not(:nth-of-type(3))::after {
-                                height: 64px;
-                            }
+                        > div:first-of-type {
+                            border-radius: 40px;
+                        
                         }
 
                         > div:last-of-type {
-                            margin-top: 40px;
+                            border-radius: 40px;
+                            margin: 60px auto;
+                            width: 60%;
+                            > div {
+                                width: 50%;
+                                input {
+                                    width: 80%;
+                                    background-color: transparent;
+                                }
+                            }
                         }
+                        
                     }
                 }
             }
@@ -182,6 +173,43 @@ main {
     }
 }
 
-@include mixin_media_query(max, tama4_5){
+@include mixin_media_query(max, tama5){
+    /* main > section > article > form > div:first-of-type > div:last-of-type */
+    main {
+        > section {
+            > article:last-of-type {
+                padding: 0px;
+                > form {
+                    > div:first-of-type {
+                        width: 90vw;
+                        background-color: nth($colores_bg, 4);
+                        border-radius: 10%;
+                        *::after {
+                            display: none;
+                        }
 
+                        > div:first-of-type {
+                            select {
+                                width: auto;
+                            }
+
+                            > div {
+                                width: 100%;
+                                border-bottom: 2px solid nth($colores_bg, 2);
+                            }
+                        }
+
+                        > div:last-of-type {
+                            margin: 0 auto;
+                            width: 100%;
+                            > div:not(:last-of-type) {
+                                width: 100%;
+                                border-bottom: 2px solid nth($colores_bg, 2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
