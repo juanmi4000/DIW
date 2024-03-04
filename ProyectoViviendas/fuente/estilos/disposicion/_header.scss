@@ -42,10 +42,6 @@ nav ul {
     }
 
     .boton-cabecera{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: .40rem;
+        display: block;
     }
 }

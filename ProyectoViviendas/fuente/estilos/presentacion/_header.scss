@@ -64,20 +64,20 @@ nav img{
         padding: 1px 6px;
     }
 
-    .boton-cabecera{
-        width: 2rem;
-        height: 3rem;
+   .boton-cabecera{
+        width: 30px;
         border: 0;
         background: transparent;
-        margin-right: 6px;
+        margin-right: 20px;
+        margin-bottom: 10px;
     }
     
-    .boton-cabecera > div{
+     /* .boton-cabecera > div{
         background-color: black;
         height: 2px;
         width: 90%;
         border-radius: 5px;
         /* transition: all .5s;
-        transform-origin: left; */
-    }
+        transform-origin: left; 
+    } */
 }

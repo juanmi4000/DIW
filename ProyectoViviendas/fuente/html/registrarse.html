@@ -10,10 +10,7 @@
         <header>
             <nav>
                 <a class="logo" href="../index.html"><img src="../../node_modules/remixicons/fill/home-heart.svg" alt="Logo"></a>
-                <button id="btn-regis" class="inicio-regis">
-                    <div></div>
-                    <div></div>
-                </button>
+                <a href="inicioSesion.html" class="inicio-regis"><img id="btn-inicio" src="../../node_modules/remixicons/fill/close.svg" alt="Icono de para cerrar el registrarse"></a>
             </nav>
         </header>
         <main class="main-regis">
@@ -33,7 +30,7 @@
                         <input type="text" id="direccion" placeholder="Introduce tu dirección" required>
 
                         <label for="fechaNac">Fecha de nacimiento</label>
-                        <input type="date" id="fechaNac" placeholder="dd/mm/YYYY" required> <!-- Revisar si es date o datetime -->
+                        <input type="date" id="fechaNac" required> 
                         
                         <label>Género</label>
                         <div class="inl">
@@ -53,12 +50,5 @@
                 </article>
             </section>
         </main>
-
-        <script>    
-            let btnRegis = document.getElementById("btn-regis");
-            btnRegis.addEventListener("click", (evento) => {
-                location.href = "./inicioSesion.html";
-            });
-        </script>
     </body>
 </html>
