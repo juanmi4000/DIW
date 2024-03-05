@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/juanmi4000/GarciaMoyano_JuanManuel_DIW#readme",
   "devDependencies": {
+    "flowbite": "^2.3.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.11.0",
     "prettier": "^3.2.5",
